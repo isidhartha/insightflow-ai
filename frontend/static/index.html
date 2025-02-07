@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en" id="htmlRoot">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>InsightFlow AI — Product Analytics</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="if-bg font-inter h-screen overflow-hidden flex">
+
+  <!-- Mobile overlay -->
+  <div id="mobileOverlay" class="fixed inset-0 bg-black/50 z-40 hidden" onclick="toggleSidebar()"></div>
+
+  <!-- SIDEBAR -->
+  <aside id="sidebar" class="if-sidebar w-60 flex flex-col z-50">
+    <div class="p-5 border-b border-border">
+      <div class="flex items-center gap-3">
+        <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center">
+          <i class="fas fa-chart-mixed text-white text-sm"></i>
+        </div>
+        <div>
+          <div class="font-bold text-sm">InsightFlow</div>
+          <div class="text-xs text-muted">Product Analytics</div>
+        </div>
+      </div>
+    </div>
+
+    <nav class="flex-1 p-3 space-y-0.5">
+      <button onclick="showSection('overview')" id="nav-overview" class="if-nav active w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm">
+        <i class="fas fa-gauge w-4 text-center text-indigo-500"></i> Overview
+      </button>
+      <button onclick="showSection('pageviews')" id="nav-pageviews" class="if-nav w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm">
+        <i class="fas fa-chart-line w-4 text-center text-blue-500"></i> Pageviews
+      </button>
+      <button onclick="showSection('funnels')" id="nav-funnels" class="if-nav w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm">
+        <i class="fas fa-filter w-4 text-center text-purple-500"></i> Funnels
+      </button>
+      <button onclick="showSection('retention')" id="nav-retention" class="if-nav w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm">
+        <i class="fas fa-users w-4 text-center text-cyan-500"></i> Retention
+      </button>
+      <button onclick="showSection('events')" id="nav-events" class="if-nav w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm">
+        <i class="fas fa-bolt w-4 text-center text-yellow-500"></i> Events
+      </button>
+      <button onclick="showSection('insights')" id="nav-insights" class="if-nav w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm">
+        <i class="fas fa-brain w-4 text-center text-green-500"></i> AI Insights
+      </button>
+    </nav>
+
+    <div class="p-4 border-t border-border">
+      <div class="text-xs text-muted flex items-center gap-2">
+        <div id="healthDot" class="w-2 h-2 rounded-full bg-slate-400"></div>
+        <span id="healthLabel">Connecting…</span>
+      </div>
+    </div>
+  </aside>
+
+  <!-- MAIN -->
+  <main class="flex-1 flex flex-col overflow-hidden">
+    <!-- Top bar -->
+    <header class="if-header flex items-center justify-between px-5 py-3 border-b border-border">
+      <div class="flex items-center gap-3">
+        <button onclick="toggleSidebar()" class="md:hidden text-muted hover:text-foreground">
+          <i class="fas fa-bars"></i>
+        </button>
+        <span id="sectionTitle" class="text-sm font-semibold">Overview</span>
+      </div>
+      <div class="flex items-center gap-3">
+        <!-- Date range -->
+        <div class="flex items-center gap-1 bg-surface rounded-lg p-1">
+          <button onclick="setRange('7d')" id="range-7d" class="range-btn active text-xs px-3 py-1.5 rounded">7D</button>
+          <button onclick="setRange('30d')" id="range-30d" class="range-btn text-xs px-3 py-1.5 rounded">30D</button>
+          <button onclick="setRange('90d')" id="range-90d" class="range-btn text-xs px-3 py-1.5 rounded">90D</button>
+        </div>
+        <button onclick="toggleTheme()" class="if-btn text-xs px-3 py-1.5 rounded-lg">
+          <i class="fas fa-circle-half-stroke mr-1"></i><span class="hidden sm:inline">Theme</span>
+        </button>
+      </div>
+    </header>
+
+    <div class="flex-1 overflow-y-auto">
+
+      <!-- OVERVIEW -->
+      <div id="section-overview" class="section active p-5">
+
+        <!-- HERO BANNER -->
+        <div id="heroBanner" class="if-card rounded-xl px-5 py-4 mb-5" style="background:linear-gradient(90deg,rgba(99,102,241,0.05),rgba(168,85,247,0.05));border-color:rgba(99,102,241,0.2)">
+          <div class="flex items-start justify-between gap-4">
+            <div class="flex-1 min-w-0">
+              <div class="flex items-center gap-2 mb-1.5">
+                <span class="text-sm font-bold" style="color:var(--foreground)">InsightFlow AI</span>
+                <span class="text-xs px-2 py-0.5 rounded" style="background:rgba(99,102,241,0.1);color:#6366f1">Product Analytics</span>
+              </div>
+              <p class="text-xs leading-relaxed" style="color:var(--muted);max-width:64rem">A PostHog-compatible product analytics platform with AI superpowers. Track user events, visualize conversion funnels, analyze cohort retention, and let the AI surface the insights that actually matter — all in one place. Capture events from any app, explore trends over time, and get actionable recommendations to grow your product.</p>
+              <div class="flex flex-wrap gap-1.5 mt-2">
+                <span class="text-xs px-2 py-0.5 rounded-full" style="background:rgba(99,102,241,0.08);color:#6366f1">📊 Funnels · Retention · Pageviews</span>
+                <span class="text-xs px-2 py-0.5 rounded-full" style="background:rgba(6,182,212,0.08);color:#06b6d4">🤖 AI Insights &amp; Recommendations</span>
+                <span class="text-xs px-2 py-0.5 rounded-full" style="background:rgba(0,0,0,0.04);color:var(--muted)">⚡ PostHog-Compatible Event Capture</span>
+              </div>
+            </div>
+            <button onclick="document.getElementById('heroBanner').style.display='none'" class="flex-shrink-0 text-lg leading-none hover:opacity-60 transition mt-0.5" style="color:var(--muted)" title="Dismiss">×</button>
+          </div>
+        </div>
+        <!-- KPI cards -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
+          <div class="if-card rounded-xl p-4 border-l-4 border-indigo-500">
+            <div class="flex items-center gap-2 mb-2 text-muted text-xs">
+              <i class="fas fa-bolt text-indigo-500"></i> EVENTS
+            </div>
+            <div class="text-2xl font-bold counter" id="kpi-events">—</div>
+            <div class="text-xs text-muted mt-1" id="kpi-events-change">—</div>
+          </div>
+          <div class="if-card rounded-xl p-4 border-l-4 border-blue-500">
+            <div class="flex items-center gap-2 mb-2 text-muted text-xs">
+              <i class="fas fa-users text-blue-500"></i> USERS
+            </div>
+            <div class="text-2xl font-bold counter" id="kpi-users">—</div>
+            <div class="text-xs text-muted mt-1" id="kpi-users-change">—</div>
+          </div>
+          <div class="if-card rounded-xl p-4 border-l-4 border-purple-500">
+            <div class="flex items-center gap-2 mb-2 text-muted text-xs">
+              <i class="fas fa-window-restore text-purple-500"></i> SESSIONS
+            </div>
+            <div class="text-2xl font-bold counter" id="kpi-sessions">—</div>
+            <div class="text-xs text-muted mt-1" id="kpi-sessions-change">—</div>
+          </div>
+          <div class="if-card rounded-xl p-4 border-l-4 border-cyan-500">
+            <div class="flex items-center gap-2 mb-2 text-muted text-xs">
+              <i class="fas fa-clock text-cyan-500"></i> AVG SESSION
+            </div>
+            <div class="text-2xl font-bold counter" id="kpi-duration">—</div>
+            <div class="text-xs text-muted mt-1">duration</div>
+          </div>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-4 mb-4">
+          <div class="if-card rounded-xl p-4 md:col-span-2">
+            <div class="text-xs text-muted font-semibold mb-3">PAGEVIEWS TREND</div>
+            <canvas id="overviewChart" height="120"></canvas>
+          </div>
+          <div class="if-card rounded-xl p-4">
+            <div class="flex items-center justify-between mb-3">
+              <span class="text-xs text-muted font-semibold">TOP EVENTS</span>
+            </div>
+            <div id="topEvents" class="space-y-2 text-sm">
+              <div class="animate-pulse h-4 bg-surface rounded"></div>
+              <div class="animate-pulse h-4 bg-surface rounded w-4/5"></div>
+              <div class="animate-pulse h-4 bg-surface rounded w-3/5"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="if-card rounded-xl p-4">
+          <div class="flex items-center justify-between mb-3">
+            <span class="text-xs text-muted font-semibold">AI INSIGHTS PREVIEW</span>
+            <button onclick="generateInsights()" class="if-btn text-xs px-3 py-1.5 rounded-lg">Generate</button>
+          </div>
+          <div id="insightPreview" class="text-sm text-muted italic">Click "Generate" to get AI-powered insights for this period.</div>
+        </div>
+      </div>
+
+      <!-- PAGEVIEWS -->
+      <div id="section-pageviews" class="section p-5">
+        <div class="flex items-center gap-3 mb-4">
+          <div class="flex items-center gap-1 bg-surface rounded-lg p-1">
+            <button onclick="setGranularity('hour')" id="gran-hour" class="range-btn text-xs px-3 py-1.5 rounded">Hour</button>
+            <button onclick="setGranularity('day')" id="gran-day" class="range-btn active text-xs px-3 py-1.5 rounded">Day</button>
+            <button onclick="setGranularity('week')" id="gran-week" class="range-btn text-xs px-3 py-1.5 rounded">Week</button>
+            <button onclick="setGranularity('month')" id="gran-month" class="range-btn text-xs px-3 py-1.5 rounded">Month</button>
+          </div>
+          <div class="ml-auto flex gap-4 text-sm">
+            <span>Total: <strong id="pvTotal">—</strong></span>
+            <span>Avg: <strong id="pvAvg">—</strong></span>
+            <span>Peak: <strong id="pvPeak">—</strong></span>
+          </div>
+        </div>
+        <div class="if-card rounded-xl p-4">
+          <canvas id="pageviewsChart" height="200"></canvas>
+        </div>
+      </div>
+
+      <!-- FUNNELS -->
+      <div id="section-funnels" class="section p-5">
+        <div class="if-card rounded-xl p-5 mb-5">
+          <div class="text-sm font-semibold mb-3">Funnel Builder</div>
+          <div id="funnelSteps" class="space-y-2 mb-3">
+            <div class="flex gap-2">
+              <input type="text" placeholder="Step 1: page_view" class="if-input flex-1 rounded-lg px-3 py-2 text-sm" />
+              <button onclick="removeFunnelStep(this)" class="text-muted hover:text-red-400 px-2"><i class="fas fa-times text-xs"></i></button>
+            </div>
+            <div class="flex gap-2">
+              <input type="text" placeholder="Step 2: signup_click" class="if-input flex-1 rounded-lg px-3 py-2 text-sm" />
+              <button onclick="removeFunnelStep(this)" class="text-muted hover:text-red-400 px-2"><i class="fas fa-times text-xs"></i></button>
+            </div>
+          </div>
+          <div class="flex items-center gap-2 flex-wrap">
+            <button onclick="addFunnelStep()" class="if-btn text-xs px-3 py-1.5 rounded-lg">
+              <i class="fas fa-plus mr-1"></i>Add Step
+            </button>
+            <button onclick="analyzeFunnel()" class="if-btn-primary text-xs px-4 py-1.5 rounded-lg">
+              <i class="fas fa-chart-bar mr-1"></i>Analyze Funnel
+            </button>
+            <span class="text-xs text-muted">Templates:</span>
+            <button onclick="loadFunnelTemplate('signup')" class="if-btn text-xs px-2 py-1.5 rounded">Signup</button>
+            <button onclick="loadFunnelTemplate('purchase')" class="if-btn text-xs px-2 py-1.5 rounded">Purchase</button>
+            <button onclick="loadFunnelTemplate('onboarding')" class="if-btn text-xs px-2 py-1.5 rounded">Onboarding</button>
+          </div>
+        </div>
+        <div id="funnelChart" class="space-y-3"></div>
+      </div>
+
+      <!-- RETENTION -->
+      <div id="section-retention" class="section p-5">
+        <div class="if-card rounded-xl p-4 mb-4">
+          <div class="flex items-center justify-between mb-3">
+            <span class="text-sm font-semibold">Cohort Retention Heatmap</span>
+            <button onclick="loadRetention()" class="if-btn text-xs px-3 py-1.5 rounded-lg">Refresh</button>
+          </div>
+          <div class="flex gap-6 text-sm mb-4">
+            <span>D1: <strong id="d1Retention" class="text-indigo-500">—</strong></span>
+            <span>D7: <strong id="d7Retention" class="text-indigo-500">—</strong></span>
+            <span>D30: <strong id="d30Retention" class="text-indigo-500">—</strong></span>
+          </div>
+          <div id="retentionTable" class="overflow-x-auto">
+            <div class="text-xs text-muted italic">Loading cohort data…</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- EVENTS -->
+      <div id="section-events" class="section p-5">
+        <div class="flex items-center gap-3 mb-4">
+          <input id="eventSearch" type="text" placeholder="Search events…" oninput="filterEvents()"
+            class="if-input flex-1 rounded-lg px-3 py-2 text-sm" />
+          <select id="eventTypeFilter" onchange="loadEvents()" class="if-input rounded-lg px-3 py-2 text-sm w-40">
+            <option value="">All Types</option>
+            <option value="page_view">page_view</option>
+            <option value="click">click</option>
+            <option value="signup">signup</option>
+            <option value="purchase">purchase</option>
+          </select>
+          <div class="text-xs text-muted">
+            <span id="eventTotal">—</span> events
+            <span id="liveCountBadge" class="ml-2 text-green-500 text-xs">● live</span>
+          </div>
+        </div>
+        <div class="if-card rounded-xl overflow-hidden">
+          <table class="w-full text-sm">
+            <thead>
+              <tr class="border-b border-border text-xs text-muted">
+                <th class="px-4 py-3 text-left">TIMESTAMP</th>
+                <th class="px-4 py-3 text-left">EVENT</th>
+                <th class="px-4 py-3 text-left hidden md:table-cell">USER ID</th>
+                <th class="px-4 py-3 text-left hidden lg:table-cell">PROPERTIES</th>
+              </tr>
+            </thead>
+            <tbody id="eventsTable"></tbody>
+          </table>
+          <!-- Pagination -->
+          <div class="flex items-center justify-between px-4 py-3 border-t border-border text-xs text-muted">
+            <button onclick="prevPage()" id="prevBtn" class="if-btn px-3 py-1.5 rounded" disabled>← Prev</button>
+            <span>Page <span id="currentPage">1</span></span>
+            <button onclick="nextPage()" id="nextBtn" class="if-btn px-3 py-1.5 rounded">Next →</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- AI INSIGHTS -->
+      <div id="section-insights" class="section p-5">
+        <div class="if-card rounded-xl p-5 mb-5">
+          <div class="grid md:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-xs text-muted mb-1">TIMEFRAME FOR INSIGHTS</label>
+              <div class="flex gap-2">
+                <select id="insightTimeframe" class="if-input flex-1 rounded-lg px-3 py-2 text-sm">
+                  <option value="7d">Last 7 days</option>
+                  <option value="30d">Last 30 days</option>
+                  <option value="90d">Last 90 days</option>
+                </select>
+                <button onclick="generateInsights()" id="insightBtn" class="if-btn-primary px-4 py-2 rounded-lg text-sm font-semibold flex items-center gap-2">
+                  <i class="fas fa-brain"></i> Generate
+                </button>
+              </div>
+            </div>
+            <div>
+              <label class="block text-xs text-muted mb-1">OPTIMIZATION GOAL</label>
+              <div class="flex gap-2">
+                <input id="recGoal" type="text" placeholder="e.g. Increase signup conversion"
+                  class="if-input flex-1 rounded-lg px-3 py-2 text-sm" />
+                <button onclick="getRecommendations()" class="if-btn px-4 py-2 rounded-lg text-sm font-semibold flex items-center gap-2">
+                  <i class="fas fa-wand-magic-sparkles"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="insightCards" class="grid md:grid-cols-2 gap-4 mb-5"></div>
+        <div id="recCards" class="space-y-3"></div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Event detail side panel -->
+  <div id="eventDetail" class="fixed right-0 top-0 bottom-0 w-80 if-detail-panel border-l border-border z-30 hidden flex flex-col">
+    <div class="flex items-center justify-between px-4 py-3 border-b border-border">
+      <span class="text-sm font-semibold">Event Details</span>
+      <button onclick="closeEventDetail()" class="text-muted hover:text-foreground"><i class="fas fa-times"></i></button>
+    </div>
+    <div id="eventDetailContent" class="flex-1 overflow-y-auto p-4 text-sm"></div>
+  </div>
+
+  <div id="toastContainer" class="fixed bottom-5 right-5 z-50 space-y-2"></div>
+  <script src="app.js"></script>
+</body>
+</html>
