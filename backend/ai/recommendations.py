@@ -7,6 +7,7 @@ from typing import Any, Dict, List
 
 from backend.shared.config import get_settings
 from backend.shared.logging import get_logger
+from backend.llm_service import chat, LLM_PROVIDER
 
 logger = get_logger(__name__)
 
@@ -80,20 +81,18 @@ class RecommendationsEngine:
     async def generate(
         self, context: Dict[str, Any]
     ) -> List[Dict[str, Any]]:
-        if not self.settings.openai_api_key:
+        llm_available = LLM_PROVIDER == "ollama" or bool(self.settings.openai_api_key)
+        if not llm_available:
             return RECOMMENDATIONS_FALLBACK
         try:
-            return await self._call_openai(context)
+            return await self._call_llm(context)
         except Exception as exc:
-            logger.warning("Recommendations API failed: %s", exc)
+            logger.warning("Recommendations LLM call failed: %s", exc)
             return RECOMMENDATIONS_FALLBACK
 
-    async def _call_openai(
+    async def _call_llm(
         self, context: Dict[str, Any]
     ) -> List[Dict[str, Any]]:
-        import openai
-
-        client = openai.AsyncOpenAI(api_key=self.settings.openai_api_key)
         system = (
             "You are a senior product analyst. Given analytics metrics, return "
             "a JSON array of product recommendations. Each item must have: "
@@ -101,15 +100,12 @@ class RecommendationsEngine:
             "expected_improvement."
         )
         prompt = f"Analytics context:\n{json.dumps(context, indent=2)}\n\nProvide 4 recommendations."
-        response = await client.chat.completions.create(
-            model="gpt-4o-mini",
-            messages=[
-                {"role": "system", "content": system},
-                {"role": "user", "content": prompt},
-            ],
-            response_format={"type": "json_object"},
-            max_tokens=800,
-            temperature=0.3,
-        )
-        data = json.loads(response.choices[0].message.content)
+        messages = [
+            {"role": "system", "content": system},
+            {"role": "user", "content": prompt},
+        ]
+        import asyncio
+        loop = asyncio.get_event_loop()
+        raw = await loop.run_in_executor(None, lambda: chat(messages))
+        data = json.loads(raw)
         return data.get("recommendations", RECOMMENDATIONS_FALLBACK)

@@ -105,6 +105,21 @@ GET  /api/v1/ai/insights          — Retrieve saved insights
 
 ---
 
+## Free local LLM option (no API key needed)
+
+You can run the AI insights feature entirely on your own machine using [Ollama](https://ollama.com) — no OpenAI account or API key required.
+
+1. Install Ollama from https://ollama.com
+2. Pull the model: `ollama pull llama3.2`
+3. In your `.env`, set `LLM_PROVIDER=ollama` (leave `OPENAI_API_KEY` blank)
+4. Start the platform as normal: `docker-compose up --build`
+
+Ollama runs the model locally on your CPU/GPU. Response times will be slower than the OpenAI API depending on your hardware, but there is no cost and no data leaves your machine. To switch back to OpenAI, set `LLM_PROVIDER=openai` and add your key.
+
+To run Ollama as a Docker container alongside the other services, uncomment the `ollama` service block in `docker-compose.yml`.
+
+---
+
 ## InsightFlow vs. alternatives
 
 | Feature | InsightFlow AI | PostHog | Plausible |

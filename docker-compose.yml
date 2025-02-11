@@ -32,6 +32,7 @@ services:
     environment:
       - DATABASE_URL=postgresql://insightflow:password@postgres:5432/insightflow
       - REDIS_URL=redis://redis:6379
+      - OLLAMA_BASE_URL=${OLLAMA_BASE_URL:-http://localhost:11434}
     env_file:
       - .env
     depends_on:
@@ -49,5 +50,13 @@ services:
     depends_on:
       - backend
 
+  # ollama:
+  #   image: ollama/ollama
+  #   ports:
+  #     - "11434:11434"
+  #   volumes:
+  #     - ollama_data:/root/.ollama
+
 volumes:
   postgres_data:
+  # ollama_data:

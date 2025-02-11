@@ -1,4 +1,4 @@
-"""AI-powered analytics insights using OpenAI GPT."""
+"""AI-powered analytics insights using a configurable LLM backend."""
 
 from __future__ import annotations
 
@@ -7,6 +7,7 @@ from typing import Any, Dict, List, Optional
 
 from backend.shared.config import get_settings
 from backend.shared.logging import get_logger
+from backend.llm_service import chat, LLM_PROVIDER
 
 logger = get_logger(__name__)
 
@@ -50,36 +51,32 @@ class InsightsEngine:
     async def generate_insights(
         self, metrics: Dict[str, Any]
     ) -> Dict[str, Any]:
-        if not self.settings.openai_api_key:
-            logger.info("No OpenAI key configured — returning fallback insights")
+        llm_available = LLM_PROVIDER == "ollama" or bool(self.settings.openai_api_key)
+        if not llm_available:
+            logger.info("No LLM configured — returning fallback insights")
             return INSIGHT_FALLBACK
 
         try:
-            return await self._call_openai(metrics)
+            return await self._call_llm(metrics)
         except Exception as exc:
-            logger.warning("OpenAI call failed: %s — using fallback", exc)
+            logger.warning("LLM call failed: %s — using fallback", exc)
             return INSIGHT_FALLBACK
 
-    async def _call_openai(self, metrics: Dict[str, Any]) -> Dict[str, Any]:
-        import openai  # lazy import — optional dependency
-
-        client = openai.AsyncOpenAI(api_key=self.settings.openai_api_key)
+    async def _call_llm(self, metrics: Dict[str, Any]) -> Dict[str, Any]:
         prompt = (
             f"Analytics data (last 30 days):\n{json.dumps(metrics, indent=2)}\n\n"
             "Provide insights in JSON with keys: trends (list), concerns (list), "
             "recommendations (list), summary (string)."
         )
-        response = await client.chat.completions.create(
-            model="gpt-4o-mini",
-            messages=[
-                {"role": "system", "content": INSIGHT_SYSTEM_PROMPT},
-                {"role": "user", "content": prompt},
-            ],
-            response_format={"type": "json_object"},
-            max_tokens=600,
-            temperature=0.4,
-        )
-        return json.loads(response.choices[0].message.content)
+        messages = [
+            {"role": "system", "content": INSIGHT_SYSTEM_PROMPT},
+            {"role": "user", "content": prompt},
+        ]
+        # chat() is synchronous; run in executor to keep async interface intact
+        import asyncio
+        loop = asyncio.get_event_loop()
+        raw = await loop.run_in_executor(None, lambda: chat(messages))
+        return json.loads(raw)
 
     async def analyze_trend(
         self, series: List[Dict[str, Any]], metric: str

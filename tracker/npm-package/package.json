@@ -1,0 +1,28 @@
+{
+  "name": "@isidhartha/insightflow",
+  "version": "1.0.0",
+  "description": "Lightweight analytics tracker for InsightFlow AI — drop-in event capture, session tracking, and funnel analysis",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/isidhartha/insightflow-ai.git"
+  },
+  "homepage": "https://github.com/isidhartha/insightflow-ai#readme",
+  "bugs": {
+    "url": "https://github.com/isidhartha/insightflow-ai/issues"
+  },
+  "keywords": [
+    "analytics",
+    "tracking",
+    "product-analytics",
+    "event-tracking",
+    "self-hosted",
+    "insightflow"
+  ],
+  "author": "Sidhartha <ramsiddhartha71154@gmail.com>",
+  "license": "MIT",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  }
+}
