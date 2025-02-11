@@ -1,6 +1,6 @@
 {
   "name": "@isidhartha/insightflow",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Lightweight analytics tracker for InsightFlow AI — drop-in event capture, session tracking, and funnel analysis",
   "main": "index.js",
   "types": "index.d.ts",
