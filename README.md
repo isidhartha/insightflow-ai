@@ -1,5 +1,7 @@
 # InsightFlow AI
 
+[![Discussions](https://img.shields.io/github/discussions/isidhartha/insightflow-ai)](https://github.com/isidhartha/insightflow-ai/discussions)
+
 I wanted analytics for a side project but didn't want to hand my users' data to a third party, and I didn't want to pay for PostHog's cloud plan. So I built InsightFlow — a self-hosted product analytics platform with an AI layer that actually tells you what the data means.
 
 The difference from standard analytics is the AI insights feature. Most analytics dashboards show you numbers and leave the interpretation to you. InsightFlow looks at your data and tells you things like "users who land on the pricing page from Google have a 3x higher conversion rate than those from social media" or "your retention drops off sharply at day 7 — here's a hypothesis about why." Those observations take an analyst hours to find manually. The AI surfaces them in seconds.
