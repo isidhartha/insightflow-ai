@@ -7,3 +7,4 @@ Running log of changes. Most recent at the bottom.
 [2026-02-19] tracker snippet minification
 [2026-02-19] docs: add missing param docs
 [2026-02-19] working on it
+[2026-02-19] got it working
