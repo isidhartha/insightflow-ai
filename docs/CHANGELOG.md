@@ -11,3 +11,4 @@ Running log of changes. Most recent at the bottom.
 [2026-02-20] session duration calculation
 [2026-02-20] regression test added
 [2026-02-20] removed debug prints
+[2026-02-21] input bounds check
