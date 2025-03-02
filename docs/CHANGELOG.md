@@ -13,3 +13,4 @@ Running log of changes. Most recent at the bottom.
 [2026-02-20] removed debug prints
 [2026-02-21] input bounds check
 [2026-02-21] readme improvements
+[2026-02-21] first pass
