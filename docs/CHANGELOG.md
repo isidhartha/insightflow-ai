@@ -14,3 +14,4 @@ Running log of changes. Most recent at the bottom.
 [2026-02-21] input bounds check
 [2026-02-21] readme improvements
 [2026-02-21] first pass
+[2026-02-24] fixed config override bug
