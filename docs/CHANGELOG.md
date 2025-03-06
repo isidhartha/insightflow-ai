@@ -18,3 +18,4 @@ Running log of changes. Most recent at the bottom.
 [2026-02-24] minor refactor
 [2026-02-24] referrer parsing
 [2026-02-24] a/b test tracking
+[2026-02-24] fix: off by one
