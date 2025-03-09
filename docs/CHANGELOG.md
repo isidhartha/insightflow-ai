@@ -20,3 +20,4 @@ Running log of changes. Most recent at the bottom.
 [2026-02-24] a/b test tracking
 [2026-02-24] fix: off by one
 [2026-02-24] readme cleanup
+[2026-02-24] improved test reliability
