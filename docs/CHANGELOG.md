@@ -23,3 +23,4 @@ Running log of changes. Most recent at the bottom.
 [2026-02-24] improved test reliability
 [2026-02-24] faster startup
 [2026-02-24] sync with main
+[2026-02-25] event schema update
