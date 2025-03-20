@@ -27,3 +27,4 @@ Running log of changes. Most recent at the bottom.
 [2026-02-25] funnel step ordering
 [2026-02-25] fix: environment variable parsing
 [2026-02-25] chore: update license year
+[2026-02-26] heatmap coordinate normalization
