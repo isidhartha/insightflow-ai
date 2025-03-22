@@ -30,3 +30,4 @@ Running log of changes. Most recent at the bottom.
 [2026-02-26] heatmap coordinate normalization
 [2026-02-26] reverted bad change
 [2026-02-26] startup time improvement
+[2026-02-26] chore: cleanup old scripts
