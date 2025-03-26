@@ -32,3 +32,4 @@ Running log of changes. Most recent at the bottom.
 [2026-02-26] startup time improvement
 [2026-02-26] chore: cleanup old scripts
 [2026-02-26] reduce nesting
+[2026-02-26] expanded architecture notes
