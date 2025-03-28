@@ -35,3 +35,4 @@ Running log of changes. Most recent at the bottom.
 [2026-02-26] expanded architecture notes
 [2026-02-26] formatting cleanup
 [2026-02-26] conversion attribution
+[2026-02-28] progress
