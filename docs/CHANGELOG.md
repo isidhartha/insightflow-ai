@@ -38,3 +38,4 @@ Running log of changes. Most recent at the bottom.
 [2026-02-28] progress
 [2026-02-28] added troubleshooting section
 [2026-02-28] graceful degradation
+[2026-02-28] guard clause cleanup
