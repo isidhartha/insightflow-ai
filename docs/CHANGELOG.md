@@ -41,3 +41,4 @@ Running log of changes. Most recent at the bottom.
 [2026-02-28] guard clause cleanup
 [2026-02-28] quick improvement
 [2026-02-28] fixed the broken test
+[2026-02-28] connection pool sizing
