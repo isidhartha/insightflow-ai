@@ -48,3 +48,4 @@ Running log of changes. Most recent at the bottom.
 [2026-03-02] cleaned up imports
 [2026-03-02] whitespace fix
 [2026-03-03] retention matrix calculation
+[2026-03-03] fix: config values not loading
