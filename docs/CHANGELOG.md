@@ -55,3 +55,4 @@ Running log of changes. Most recent at the bottom.
 [2026-03-03] cleaned up config
 [2026-03-04] post merge cleanup
 [2026-03-04] docs: clearer setup instructions
+[2026-03-04] pageview deduplication
