@@ -57,3 +57,4 @@ Running log of changes. Most recent at the bottom.
 [2026-03-04] docs: clearer setup instructions
 [2026-03-04] pageview deduplication
 [2026-03-04] linting fixes
+[2026-03-04] clearer docs
