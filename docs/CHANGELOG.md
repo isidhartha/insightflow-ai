@@ -65,3 +65,4 @@ Running log of changes. Most recent at the bottom.
 [2026-03-05] async fix
 [2026-03-05] docs: better examples
 [2026-03-06] added some tests
+[2026-03-06] optimized hot path
