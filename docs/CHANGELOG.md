@@ -74,3 +74,4 @@ Running log of changes. Most recent at the bottom.
 [2026-03-07] improved api documentation
 [2026-03-07] fixed pagination edge case
 [2026-03-07] moved to config
+[2026-03-08] added missing docs
