@@ -78,3 +78,4 @@ Running log of changes. Most recent at the bottom.
 [2026-03-08] header cleanup
 [2026-03-08] added integration test
 [2026-03-08] search ranking tweak
+[2026-03-08] query optimization
