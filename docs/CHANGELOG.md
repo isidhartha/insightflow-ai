@@ -81,3 +81,4 @@ Running log of changes. Most recent at the bottom.
 [2026-03-08] query optimization
 [2026-03-08] test: more edge cases
 [2026-03-08] resource limits
+[2026-03-09] session reconstruction logic
