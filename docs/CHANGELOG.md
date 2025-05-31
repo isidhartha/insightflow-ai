@@ -83,3 +83,4 @@ Running log of changes. Most recent at the bottom.
 [2026-03-08] resource limits
 [2026-03-09] session reconstruction logic
 [2026-03-09] consolidate duplicate logic
+[2026-03-09] docs: installation steps update
