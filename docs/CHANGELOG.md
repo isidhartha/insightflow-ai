@@ -85,3 +85,4 @@ Running log of changes. Most recent at the bottom.
 [2026-03-09] consolidate duplicate logic
 [2026-03-09] docs: installation steps update
 [2026-03-11] fix: lint errors
+[2026-03-11] perf: lazy initialization
