@@ -92,3 +92,4 @@ Running log of changes. Most recent at the bottom.
 [2026-03-12] cache ttl adjustment
 [2026-03-12] removed magic numbers
 [2026-03-12] improved test assertions
+[2026-03-12] fix: log level override not working
