@@ -95,3 +95,4 @@ Running log of changes. Most recent at the bottom.
 [2026-03-12] fix: log level override not working
 [2026-03-14] updated env example file
 [2026-03-14] chore: update dependencies
+[2026-03-14] fixed failing test
