@@ -97,3 +97,4 @@ Running log of changes. Most recent at the bottom.
 [2026-03-14] chore: update dependencies
 [2026-03-14] fixed failing test
 [2026-03-14] code review fixes
+[2026-03-14] better memory usage
