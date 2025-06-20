@@ -100,3 +100,4 @@ Running log of changes. Most recent at the bottom.
 [2026-03-14] better memory usage
 [2026-03-14] improve readability
 [2026-03-19] batch processing improvement
+[2026-03-19] cors fix
