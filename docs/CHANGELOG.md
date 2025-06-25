@@ -103,3 +103,4 @@ Running log of changes. Most recent at the bottom.
 [2026-03-19] cors fix
 [2026-03-19] better type handling
 [2026-03-19] reduced unnecessary work
+[2026-03-21] chore: rename for clarity
