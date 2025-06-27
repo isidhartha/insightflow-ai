@@ -105,3 +105,4 @@ Running log of changes. Most recent at the bottom.
 [2026-03-19] reduced unnecessary work
 [2026-03-21] chore: rename for clarity
 [2026-03-21] cleaned up util functions
+[2026-03-21] fix: encoding issue in response
