@@ -113,3 +113,4 @@ Running log of changes. Most recent at the bottom.
 [2026-03-22] fix: missing return statement
 [2026-03-22] merge fixes
 [2026-03-22] alternative approach
+[2026-03-24] fixed timeout handling
