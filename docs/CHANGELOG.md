@@ -117,3 +117,4 @@ Running log of changes. Most recent at the bottom.
 [2026-03-24] squash commits
 [2026-03-24] fix: memory not released on shutdown
 [2026-03-24] documentation cleanup
+[2026-03-25] this should do it
