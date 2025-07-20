@@ -120,3 +120,4 @@ Running log of changes. Most recent at the bottom.
 [2026-03-25] this should do it
 [2026-03-25] code cleanup
 [2026-03-25] cleaned up error handling
+[2026-03-25] fix: null check was missing
