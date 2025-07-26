@@ -124,3 +124,4 @@ Running log of changes. Most recent at the bottom.
 [2026-03-25] fix: response shape mismatch
 [2026-03-26] fixed missing null checks
 [2026-03-26] docs: update changelog
+[2026-03-28] better getting started guide
