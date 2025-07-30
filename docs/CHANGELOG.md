@@ -127,3 +127,4 @@ Running log of changes. Most recent at the bottom.
 [2026-03-28] better getting started guide
 [2026-03-28] dashboard date range fix
 [2026-03-28] output sanitization
+[2026-03-29] updated setup docs
