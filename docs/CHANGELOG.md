@@ -130,3 +130,4 @@ Running log of changes. Most recent at the bottom.
 [2026-03-29] updated setup docs
 [2026-03-29] auth token refresh
 [2026-03-29] api docs update
+[2026-03-30] refactor: consolidate error handling
