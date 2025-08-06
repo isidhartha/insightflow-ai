@@ -132,3 +132,4 @@ Running log of changes. Most recent at the bottom.
 [2026-03-29] api docs update
 [2026-03-30] refactor: consolidate error handling
 [2026-03-30] tweaks
+[2026-03-30] fixed broken link in readme
