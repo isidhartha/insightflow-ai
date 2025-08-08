@@ -134,3 +134,4 @@ Running log of changes. Most recent at the bottom.
 [2026-03-30] tweaks
 [2026-03-30] fixed broken link in readme
 [2026-04-03] docker build fix
+[2026-04-03] event ingestion validation
