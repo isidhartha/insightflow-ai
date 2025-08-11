@@ -139,3 +139,4 @@ Running log of changes. Most recent at the bottom.
 [2026-04-03] cleanup and formatting
 [2026-04-03] fix: bad import path
 [2026-04-03] dependency cleanup
+[2026-04-03] fix: race condition in handler
