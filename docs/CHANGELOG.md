@@ -141,3 +141,4 @@ Running log of changes. Most recent at the bottom.
 [2026-04-03] dependency cleanup
 [2026-04-03] fix: race condition in handler
 [2026-04-03] fix: typo in error message
+[2026-04-04] better concurrency
