@@ -144,3 +144,4 @@ Running log of changes. Most recent at the bottom.
 [2026-04-04] better concurrency
 [2026-04-04] polish
 [2026-04-04] updated changelog
+[2026-04-04] renamed for clarity
