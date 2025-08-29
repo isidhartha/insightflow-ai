@@ -151,3 +151,4 @@ Running log of changes. Most recent at the bottom.
 [2026-04-05] perf: avoid redundant computation
 [2026-04-05] insights cache invalidation
 [2026-04-06] updated readme
+[2026-04-06] fixed response format issue
