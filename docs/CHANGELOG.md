@@ -154,3 +154,4 @@ Running log of changes. Most recent at the bottom.
 [2026-04-06] fixed response format issue
 [2026-04-06] null safety improvement
 [2026-04-06] self review fixes
+[2026-04-07] early return pattern
