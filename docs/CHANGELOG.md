@@ -158,3 +158,4 @@ Running log of changes. Most recent at the bottom.
 [2026-04-07] all tests green
 [2026-04-07] fix: edge case with empty input
 [2026-04-07] test: better assertions
+[2026-04-07] cleanup
