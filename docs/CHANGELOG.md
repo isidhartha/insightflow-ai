@@ -160,3 +160,4 @@ Running log of changes. Most recent at the bottom.
 [2026-04-07] test: better assertions
 [2026-04-07] cleanup
 [2026-04-07] goal completion events
+[2026-04-07] filter improvement
