@@ -164,3 +164,4 @@ Running log of changes. Most recent at the bottom.
 [2026-04-08] address review feedback
 [2026-04-08] fixed edge case in prod
 [2026-04-08] better separation of concerns
+[2026-04-08] more test coverage
