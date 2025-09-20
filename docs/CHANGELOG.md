@@ -166,3 +166,4 @@ Running log of changes. Most recent at the bottom.
 [2026-04-08] better separation of concerns
 [2026-04-08] more test coverage
 [2026-04-08] refactor: simplify logic
+[2026-04-08] fixed typo in comment
