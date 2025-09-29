@@ -170,3 +170,4 @@ Running log of changes. Most recent at the bottom.
 [2026-04-08] removed unused variables
 [2026-04-08] docs: fix typo in readme
 [2026-04-08] sensible defaults
+[2026-04-08] user property tracking
