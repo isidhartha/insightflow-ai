@@ -173,3 +173,4 @@ Running log of changes. Most recent at the bottom.
 [2026-04-08] user property tracking
 [2026-04-08] perf: cache the result
 [2026-04-09] style: consistent indentation
+[2026-04-09] docs: update readme
