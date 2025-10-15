@@ -178,3 +178,4 @@ Running log of changes. Most recent at the bottom.
 [2026-04-10] dashboard sharing
 [2026-04-12] test cleanup
 [2026-04-12] chore: remove debug logs
+[2026-04-12] rough draft
