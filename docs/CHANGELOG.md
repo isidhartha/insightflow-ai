@@ -179,3 +179,4 @@ Running log of changes. Most recent at the bottom.
 [2026-04-12] test cleanup
 [2026-04-12] chore: remove debug logs
 [2026-04-12] rough draft
+[2026-04-12] health check endpoint
