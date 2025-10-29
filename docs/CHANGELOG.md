@@ -186,3 +186,4 @@ Running log of changes. Most recent at the bottom.
 [2026-04-13] data sampling logic
 [2026-04-13] chore: standardize naming
 [2026-04-13] docs: api reference update
+[2026-04-13] query performance
