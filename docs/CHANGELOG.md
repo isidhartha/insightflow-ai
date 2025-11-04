@@ -190,3 +190,4 @@ Running log of changes. Most recent at the bottom.
 [2026-04-13] bounce rate fix
 [2026-04-13] trying a different approach
 [2026-04-14] packages updated
+[2026-04-14] fix: wrong variable used
