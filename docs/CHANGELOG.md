@@ -192,3 +192,4 @@ Running log of changes. Most recent at the bottom.
 [2026-04-14] packages updated
 [2026-04-14] fix: wrong variable used
 [2026-04-14] retention cohort alignment
+[2026-04-16] chore: remove dead code
