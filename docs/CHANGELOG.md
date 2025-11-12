@@ -197,3 +197,4 @@ Running log of changes. Most recent at the bottom.
 [2026-04-16] added edge case tests
 [2026-04-16] test fixtures update
 [2026-04-16] mocked external dependencies
+[2026-04-16] back to simpler approach
