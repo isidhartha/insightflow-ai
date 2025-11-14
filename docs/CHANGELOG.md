@@ -200,3 +200,4 @@ Running log of changes. Most recent at the bottom.
 [2026-04-16] back to simpler approach
 [2026-04-16] refactor: extract constants
 [2026-04-17] chart rendering performance
+[2026-04-17] fix: broken unit test
