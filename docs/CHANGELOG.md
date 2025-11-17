@@ -203,3 +203,4 @@ Running log of changes. Most recent at the bottom.
 [2026-04-17] fix: broken unit test
 [2026-04-17] final touches
 [2026-04-17] fixed outdated instructions
+[2026-04-17] version bump
