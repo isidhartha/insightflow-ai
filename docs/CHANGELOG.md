@@ -205,3 +205,4 @@ Running log of changes. Most recent at the bottom.
 [2026-04-17] fixed outdated instructions
 [2026-04-17] version bump
 [2026-04-17] fix: wrong status code
+[2026-04-17] finally fixed that edge case
