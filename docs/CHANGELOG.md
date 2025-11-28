@@ -209,3 +209,4 @@ Running log of changes. Most recent at the bottom.
 [2026-04-18] request validation
 [2026-04-18] fixed that null crash
 [2026-04-18] funnel conversion calculation
+[2026-04-18] db index added
