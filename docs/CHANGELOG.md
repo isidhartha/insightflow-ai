@@ -212,3 +212,4 @@ Running log of changes. Most recent at the bottom.
 [2026-04-18] db index added
 [2026-04-18] cache invalidation fix
 [2026-04-19] user identification fix
+[2026-04-19] removed dead code
