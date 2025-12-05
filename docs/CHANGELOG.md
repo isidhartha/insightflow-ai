@@ -215,3 +215,4 @@ Running log of changes. Most recent at the bottom.
 [2026-04-19] removed dead code
 [2026-04-19] session handling
 [2026-04-19] stricter validation
+[2026-04-20] test: add basic unit tests
