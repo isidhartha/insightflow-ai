@@ -218,3 +218,4 @@ Running log of changes. Most recent at the bottom.
 [2026-04-20] test: add basic unit tests
 [2026-04-20] chore: gitignore update
 [2026-04-20] addressed feedback
+[2026-04-20] clearer contributing guide
