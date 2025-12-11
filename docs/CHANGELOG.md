@@ -220,3 +220,4 @@ Running log of changes. Most recent at the bottom.
 [2026-04-20] addressed feedback
 [2026-04-20] clearer contributing guide
 [2026-04-20] style: quote consistency
+[2026-04-21] hotfix: bad default config
