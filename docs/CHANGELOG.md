@@ -226,3 +226,4 @@ Running log of changes. Most recent at the bottom.
 [2026-04-23] anomaly detection sensitivity
 [2026-04-23] consistent naming
 [2026-04-23] fixed error propagation
+[2026-04-24] cleaned up after merge
