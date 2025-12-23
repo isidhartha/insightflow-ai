@@ -231,3 +231,4 @@ Running log of changes. Most recent at the bottom.
 [2026-04-24] fixed wrong import path
 [2026-04-24] hotfix: null dereference
 [2026-04-24] refactor: split into smaller functions
+[2026-04-24] it works now
