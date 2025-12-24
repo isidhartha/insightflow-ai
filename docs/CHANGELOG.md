@@ -233,3 +233,4 @@ Running log of changes. Most recent at the bottom.
 [2026-04-24] refactor: split into smaller functions
 [2026-04-24] it works now
 [2026-04-24] finishing up
+[2026-04-25] small improvement
