@@ -237,3 +237,4 @@ Running log of changes. Most recent at the bottom.
 [2026-04-25] style: formatting
 [2026-04-25] pagination cursor fix
 [2026-04-25] test: fix flaky test
+[2026-04-25] tracker snippet minification
