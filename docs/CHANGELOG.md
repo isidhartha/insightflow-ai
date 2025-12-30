@@ -238,3 +238,4 @@ Running log of changes. Most recent at the bottom.
 [2026-04-25] pagination cursor fix
 [2026-04-25] test: fix flaky test
 [2026-04-25] tracker snippet minification
+[2026-04-26] docs: add missing param docs
