@@ -240,3 +240,4 @@ Running log of changes. Most recent at the bottom.
 [2026-04-25] tracker snippet minification
 [2026-04-26] docs: add missing param docs
 [2026-04-26] working on it
+[2026-04-26] got it working
