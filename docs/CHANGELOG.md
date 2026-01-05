@@ -242,3 +242,4 @@ Running log of changes. Most recent at the bottom.
 [2026-04-26] working on it
 [2026-04-26] got it working
 [2026-04-26] session duration calculation
+[2026-04-26] regression test added
