@@ -245,3 +245,4 @@ Running log of changes. Most recent at the bottom.
 [2026-04-26] regression test added
 [2026-04-26] removed debug prints
 [2026-04-28] input bounds check
+[2026-04-28] readme improvements
