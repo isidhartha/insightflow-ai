@@ -249,3 +249,4 @@ Running log of changes. Most recent at the bottom.
 [2026-04-28] first pass
 [2026-04-28] fixed config override bug
 [2026-04-28] minor refactor
+[2026-04-28] referrer parsing
