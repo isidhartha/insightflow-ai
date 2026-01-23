@@ -255,3 +255,4 @@ Running log of changes. Most recent at the bottom.
 [2026-04-29] readme cleanup
 [2026-04-29] improved test reliability
 [2026-04-29] faster startup
+[2026-04-29] sync with main
