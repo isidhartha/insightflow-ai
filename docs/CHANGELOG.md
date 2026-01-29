@@ -259,3 +259,4 @@ Running log of changes. Most recent at the bottom.
 [2026-04-30] event schema update
 [2026-04-30] funnel step ordering
 [2026-04-30] fix: environment variable parsing
+[2026-05-01] chore: update license year
