@@ -261,3 +261,4 @@ Running log of changes. Most recent at the bottom.
 [2026-04-30] fix: environment variable parsing
 [2026-05-01] chore: update license year
 [2026-05-01] heatmap coordinate normalization
+[2026-05-01] reverted bad change
