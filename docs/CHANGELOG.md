@@ -264,3 +264,4 @@ Running log of changes. Most recent at the bottom.
 [2026-05-01] reverted bad change
 [2026-05-01] startup time improvement
 [2026-05-01] chore: cleanup old scripts
+[2026-05-01] reduce nesting
