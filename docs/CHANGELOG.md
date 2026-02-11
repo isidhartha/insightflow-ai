@@ -267,3 +267,4 @@ Running log of changes. Most recent at the bottom.
 [2026-05-01] reduce nesting
 [2026-05-01] expanded architecture notes
 [2026-05-02] formatting cleanup
+[2026-05-02] conversion attribution
