@@ -271,3 +271,4 @@ Running log of changes. Most recent at the bottom.
 [2026-05-02] progress
 [2026-05-02] added troubleshooting section
 [2026-05-03] graceful degradation
+[2026-05-03] guard clause cleanup
