@@ -273,3 +273,4 @@ Running log of changes. Most recent at the bottom.
 [2026-05-03] graceful degradation
 [2026-05-03] guard clause cleanup
 [2026-05-03] quick improvement
+[2026-05-04] fixed the broken test
