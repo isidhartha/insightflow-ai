@@ -276,3 +276,4 @@ Running log of changes. Most recent at the bottom.
 [2026-05-04] fixed the broken test
 [2026-05-04] connection pool sizing
 [2026-05-04] docs: docker setup clarification
+[2026-05-06] tests passing now
