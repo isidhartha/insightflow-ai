@@ -282,3 +282,4 @@ Running log of changes. Most recent at the bottom.
 [2026-05-07] whitespace fix
 [2026-05-08] retention matrix calculation
 [2026-05-08] fix: config values not loading
+[2026-05-09] small fix
