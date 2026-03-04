@@ -285,3 +285,4 @@ Running log of changes. Most recent at the bottom.
 [2026-05-09] small fix
 [2026-05-09] dashboard export fix
 [2026-05-09] chore: remove unused imports
+[2026-05-09] cleaned up config
