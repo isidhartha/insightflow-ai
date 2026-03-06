@@ -287,3 +287,4 @@ Running log of changes. Most recent at the bottom.
 [2026-05-09] chore: remove unused imports
 [2026-05-09] cleaned up config
 [2026-05-10] post merge cleanup
+[2026-05-10] docs: clearer setup instructions
