@@ -290,3 +290,4 @@ Running log of changes. Most recent at the bottom.
 [2026-05-10] docs: clearer setup instructions
 [2026-05-10] pageview deduplication
 [2026-05-10] linting fixes
+[2026-05-10] clearer docs
