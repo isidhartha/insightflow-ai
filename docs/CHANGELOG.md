@@ -294,3 +294,4 @@ Running log of changes. Most recent at the bottom.
 [2026-05-10] removed unused dependencies
 [2026-05-11] minor tweaks
 [2026-05-11] reorganized files
+[2026-05-11] simplified conditional
