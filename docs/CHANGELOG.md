@@ -298,3 +298,4 @@ Running log of changes. Most recent at the bottom.
 [2026-05-11] async fix
 [2026-05-14] docs: better examples
 [2026-05-14] added some tests
+[2026-05-14] optimized hot path
