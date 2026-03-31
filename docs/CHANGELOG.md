@@ -300,3 +300,4 @@ Running log of changes. Most recent at the bottom.
 [2026-05-14] added some tests
 [2026-05-14] optimized hot path
 [2026-05-15] test: improve mock setup
+[2026-05-15] signal handling
