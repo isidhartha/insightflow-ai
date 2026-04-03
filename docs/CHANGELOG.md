@@ -302,3 +302,4 @@ Running log of changes. Most recent at the bottom.
 [2026-05-15] test: improve mock setup
 [2026-05-15] signal handling
 [2026-05-15] fix: incorrect default value
+[2026-05-15] ai insights prompt update
