@@ -306,3 +306,4 @@ Running log of changes. Most recent at the bottom.
 [2026-05-16] retry logic improved
 [2026-05-16] improved api documentation
 [2026-05-16] fixed pagination edge case
+[2026-05-16] moved to config
