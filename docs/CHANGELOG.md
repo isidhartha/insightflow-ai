@@ -308,3 +308,4 @@ Running log of changes. Most recent at the bottom.
 [2026-05-16] fixed pagination edge case
 [2026-05-16] moved to config
 [2026-05-16] added missing docs
+[2026-05-16] header cleanup
