@@ -309,3 +309,4 @@ Running log of changes. Most recent at the bottom.
 [2026-05-16] moved to config
 [2026-05-16] added missing docs
 [2026-05-16] header cleanup
+[2026-05-16] added integration test
