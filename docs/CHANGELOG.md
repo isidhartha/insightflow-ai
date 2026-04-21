@@ -312,3 +312,4 @@ Running log of changes. Most recent at the bottom.
 [2026-05-16] added integration test
 [2026-05-17] search ranking tweak
 [2026-05-17] query optimization
+[2026-05-17] test: more edge cases
