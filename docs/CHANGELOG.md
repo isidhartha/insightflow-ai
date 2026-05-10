@@ -317,3 +317,4 @@ Running log of changes. Most recent at the bottom.
 [2026-05-18] session reconstruction logic
 [2026-05-18] consolidate duplicate logic
 [2026-05-18] docs: installation steps update
+[2026-05-18] fix: lint errors
