@@ -321,3 +321,4 @@ Running log of changes. Most recent at the bottom.
 [2026-05-18] perf: lazy initialization
 [2026-05-19] fix: connection not closing properly
 [2026-05-19] added code examples to docs
+[2026-05-19] timeout tuning
