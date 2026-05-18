@@ -322,3 +322,4 @@ Running log of changes. Most recent at the bottom.
 [2026-05-19] fix: connection not closing properly
 [2026-05-19] added code examples to docs
 [2026-05-19] timeout tuning
+[2026-05-19] cache ttl adjustment
