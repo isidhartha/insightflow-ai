@@ -4,12 +4,12 @@
 
 ## Demo
 
-![Demo](docs/images/demo.gif)
+![Demo Animation](docs/images/demo.gif)
 
 ### Screenshots
 
-| Desktop | Feature View | Mobile |
-|---------|-------------|--------|
+| Desktop Dashboard | Feature View | Mobile View |
+|------------------|--------------|--------------|
 | ![Desktop](docs/images/screenshot_desktop.png) | ![Feature](docs/images/screenshot_feature.png) | ![Mobile](docs/images/screenshot_mobile.png) |
 
 
@@ -136,7 +136,7 @@ To run Ollama as a Docker container alongside the other services, uncomment the 
 ## InsightFlow vs. alternatives
 
 | Feature | InsightFlow AI | PostHog | Plausible |
-|---|---|---|---|
+|------------------|--------------|--------------|---|
 | AI-generated insights | Yes | No | No |
 | Self-hosted | Yes | Yes | Yes |
 | Funnel analysis | Yes | Yes | No |
@@ -150,7 +150,7 @@ To run Ollama as a Docker container alongside the other services, uncomment the 
 ## Configuration
 
 | Variable | Description | Default |
-|---|---|---|
+|------------------|--------------|--------------|
 | `OPENAI_API_KEY` | For AI insights generation | — |
 | `DATABASE_URL` | PostgreSQL connection string | see `.env.example` |
 | `REDIS_URL` | Redis for caching | `redis://redis:6379` |
