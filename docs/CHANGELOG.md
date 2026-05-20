@@ -234,95 +234,95 @@ Running log of changes. Most recent at the bottom.
 [2026-04-24] it works now
 [2026-04-24] finishing up
 [2026-04-25] small improvement
-[2026-04-25] style: formatting
-[2026-04-25] pagination cursor fix
-[2026-04-25] test: fix flaky test
-[2026-04-25] tracker snippet minification
-[2026-04-26] docs: add missing param docs
-[2026-04-26] working on it
-[2026-04-26] got it working
-[2026-04-26] session duration calculation
-[2026-04-26] regression test added
-[2026-04-26] removed debug prints
-[2026-04-28] input bounds check
-[2026-04-28] readme improvements
-[2026-04-28] first pass
-[2026-04-28] fixed config override bug
-[2026-04-28] minor refactor
-[2026-04-28] referrer parsing
-[2026-04-29] a/b test tracking
-[2026-04-29] fix: off by one
-[2026-04-29] readme cleanup
-[2026-04-29] improved test reliability
-[2026-04-29] faster startup
-[2026-04-29] sync with main
-[2026-04-30] event schema update
-[2026-04-30] funnel step ordering
-[2026-04-30] fix: environment variable parsing
-[2026-05-01] chore: update license year
-[2026-05-01] heatmap coordinate normalization
-[2026-05-01] reverted bad change
-[2026-05-01] startup time improvement
-[2026-05-01] chore: cleanup old scripts
-[2026-05-01] reduce nesting
-[2026-05-01] expanded architecture notes
-[2026-05-02] formatting cleanup
-[2026-05-02] conversion attribution
-[2026-05-02] progress
-[2026-05-02] added troubleshooting section
-[2026-05-03] graceful degradation
-[2026-05-03] guard clause cleanup
-[2026-05-03] quick improvement
-[2026-05-04] fixed the broken test
-[2026-05-04] connection pool sizing
-[2026-05-04] docs: docker setup clarification
-[2026-05-06] tests passing now
-[2026-05-06] real-time dashboard updates
-[2026-05-07] cleaned up imports
-[2026-05-07] whitespace fix
-[2026-05-08] retention matrix calculation
-[2026-05-08] fix: config values not loading
-[2026-05-09] small fix
-[2026-05-09] dashboard export fix
-[2026-05-09] chore: remove unused imports
-[2026-05-09] cleaned up config
-[2026-05-10] post merge cleanup
-[2026-05-10] docs: clearer setup instructions
-[2026-05-10] pageview deduplication
-[2026-05-10] linting fixes
-[2026-05-10] clearer docs
-[2026-05-10] removed unused dependencies
-[2026-05-11] minor tweaks
-[2026-05-11] reorganized files
-[2026-05-11] simplified conditional
-[2026-05-11] async fix
-[2026-05-14] docs: better examples
-[2026-05-14] added some tests
-[2026-05-14] optimized hot path
-[2026-05-15] test: improve mock setup
-[2026-05-15] signal handling
-[2026-05-15] fix: incorrect default value
-[2026-05-15] ai insights prompt update
-[2026-05-16] retry logic improved
-[2026-05-16] improved api documentation
-[2026-05-16] fixed pagination edge case
-[2026-05-16] moved to config
-[2026-05-16] added missing docs
-[2026-05-16] header cleanup
-[2026-05-16] added integration test
-[2026-05-17] search ranking tweak
-[2026-05-17] query optimization
-[2026-05-17] test: more edge cases
-[2026-05-18] resource limits
-[2026-05-18] session reconstruction logic
-[2026-05-18] consolidate duplicate logic
-[2026-05-18] docs: installation steps update
-[2026-05-18] fix: lint errors
-[2026-05-18] perf: lazy initialization
-[2026-05-19] fix: connection not closing properly
-[2026-05-19] added code examples to docs
-[2026-05-19] timeout tuning
-[2026-05-19] cache ttl adjustment
-[2026-05-19] removed magic numbers
-[2026-05-19] improved test assertions
-[2026-05-19] fix: log level override not working
+[2026-04-25] apply formatter
+[2026-04-25] fix pagination logic
+[2026-04-25] stabilize flaky test
+[2026-04-25] follow-up
+[2026-04-26] fill in missing param docs
+[2026-04-26] in progress, not done
+[2026-04-26] that finally worked
+[2026-04-26] forgot this
+[2026-04-26] another fix
+[2026-04-26] clean up logging
+[2026-04-28] validate input range
+[2026-04-28] polish readme
+[2026-04-28] first attempt
+[2026-04-28] minor update
+[2026-04-28] small rework
+[2026-04-28] forgot this
+[2026-04-29] maintenance
+[2026-04-29] fix: index arithmetic
+[2026-04-29] tidy up readme
+[2026-04-29] cleanup round 2
+[2026-04-29] one more thing
+[2026-04-29] pull latest main
+[2026-04-30] small win
+[2026-04-30] housekeeping
+[2026-04-30] fix: env parsing
+[2026-05-01] license header update
+[2026-05-01] maintenance
+[2026-05-01] undo bad change
+[2026-05-01] reduce startup time
+[2026-05-01] clean up old tooling
+[2026-05-01] reduce code depth
+[2026-05-01] update arch docs
+[2026-05-02] code style pass
+[2026-05-02] small improvement
+[2026-05-02] inching forward
+[2026-05-02] troubleshooting docs
+[2026-05-03] degrade gracefully
+[2026-05-03] clean up guards
+[2026-05-03] small win
+[2026-05-04] tweak
+[2026-05-04] adjust pool size
+[2026-05-04] clarify docker config
+[2026-05-06] all checks passing
+[2026-05-06] cleanup
+[2026-05-07] import cleanup
+[2026-05-07] tweak
+[2026-05-08] cleanup round 2
+[2026-05-08] fix: config parsing issue
+[2026-05-09] tiny fix
+[2026-05-09] another fix
+[2026-05-09] prune imports
+[2026-05-09] config cleanup
+[2026-05-10] cleanup after merge
+[2026-05-10] clarify setup steps
+[2026-05-10] follow-up
+[2026-05-10] linting cleanup
+[2026-05-10] missed this
+[2026-05-10] remove unneeded packages
+[2026-05-11] minor polish
+[2026-05-11] file reorganization
+[2026-05-11] cleaner condition
+[2026-05-11] async bug
+[2026-05-14] better example code
+[2026-05-14] a few more tests
+[2026-05-14] missed this
+[2026-05-15] improve mocking
+[2026-05-15] minor fix
+[2026-05-15] fix: bad default
+[2026-05-15] cleanup pass
+[2026-05-16] better retry strategy
+[2026-05-16] one more thing
+[2026-05-16] follow-up
+[2026-05-16] make configurable
+[2026-05-16] add missing documentation
+[2026-05-16] missed this
+[2026-05-16] add integration coverage
+[2026-05-17] ranking adjustment
+[2026-05-17] query performance
+[2026-05-17] add edge case tests
+[2026-05-18] quick pass
+[2026-05-18] one more thing
+[2026-05-18] catch-up
+[2026-05-18] installation guide update
+[2026-05-18] fix lint warnings
+[2026-05-18] lazy load
+[2026-05-19] fix: close connection
+[2026-05-19] code examples in docs
+[2026-05-19] tweak
+[2026-05-19] adjust cache ttl
+[2026-05-19] use named constants
+[2026-05-19] missed this
+[2026-05-19] fix: logging config
