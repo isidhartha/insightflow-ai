@@ -326,3 +326,4 @@ Running log of changes. Most recent at the bottom.
 [2026-05-19] removed magic numbers
 [2026-05-19] improved test assertions
 [2026-05-19] fix: log level override not working
+[2026-05-20] docs: add annotation API design spec
