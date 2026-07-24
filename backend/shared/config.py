@@ -27,7 +27,7 @@ class Settings(BaseSettings):
 
     # Security
     project_api_key: str = "if_api_key_change_me"
-    cors_origins: str = "http://localhost:3000"
+    cors_origins: str = "http://localhost:3007"
 
     # Data
     data_retention_days: int = 365

@@ -40,7 +40,10 @@ AsyncSessionLocal = async_sessionmaker(engine, expire_on_commit=False)
 @contextlib.asynccontextmanager
 async def lifespan(app: FastAPI) -> AsyncIterator[None]:
     logger.info("Starting %s v%s", settings.app_name, settings.app_version)
-    await run_migrations(engine)
+    try:
+        await run_migrations(engine)
+    except Exception as exc:
+        logger.warning("DB migration skipped (PostgreSQL unavailable): %s", exc)
     yield
     await engine.dispose()
     logger.info("Shutdown complete")
@@ -109,4 +112,4 @@ async def global_exception_handler(request: Request, exc: Exception) -> JSONResp
 if __name__ == "__main__":
     import uvicorn
 
-    uvicorn.run("backend.main:app", host="0.0.0.0", port=8000, reload=True)
+    uvicorn.run("backend.main:app", host="0.0.0.0", port=8007, reload=True)
